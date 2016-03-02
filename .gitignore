@@ -1,0 +1,24 @@
+.project
+debian/emoncms*
+settings.php
+old.settings.php
+emoncms.log
+.idea
+
+# Ignore all modules except core ones
+Modules/*
+Modules/*/
+!Modules/admin/
+!Modules/feed/
+!Modules/eventp/
+!Modules/input/
+!Modules/process/
+!Modules/schedule/
+!Modules/time/
+!Modules/user/
+!Modules/vis/
+
+# Ignore all themes except basic
+Theme/*
+Theme/*/
+!Theme/basic/

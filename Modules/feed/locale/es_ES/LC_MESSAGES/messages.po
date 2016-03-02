@@ -1,0 +1,1125 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: emoncms3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-03 17:33+0100\n"
+"PO-Revision-Date: 2015-09-03 17:36+0100\n"
+"Last-Translator: Ildefonso Martínez Marchena <i.martinezmarchena@gmail.com>\n"
+"Language-Team: \n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Generator: Poedit 1.7.5\n"
+"X-Poedit-SearchPath-0: ../../..\n"
+
+#: ../../../Views/feedapi_view.php:19
+msgid "Feed API"
+msgstr "API de fuentes de datos"
+
+#: ../../../Views/feedapi_view.php:21
+msgid "Apikey authentication"
+msgstr "Identificación por apikey"
+
+#: ../../../Views/feedapi_view.php:22
+msgid ""
+"If you want to call any of the following actions when your not logged in you "
+"have this options to authenticate with the API key:"
+msgstr ""
+"Si quiere hacer peticiones a alguna de las siguientes acciones sin estar "
+"logueado, tienes estas opciones para autenticarte con la API key:"
+
+#: ../../../Views/feedapi_view.php:23
+msgid "Append on the URL of your request: &apikey=APIKEY"
+msgstr "Añade a la url de la petición: &apikey=APIKEY"
+
+#: ../../../Views/feedapi_view.php:24
+msgid "Use POST parameter: \"apikey=APIKEY\""
+msgstr "Usa el parámetro POST: \"apikey=APIKEY\""
+
+#: ../../../Views/feedapi_view.php:25
+msgid "Add the HTTP header: \"Authorization: Bearer APIKEY\""
+msgstr "Añade la cabecera HTTP:\"Authorization: Bearer APIKEY\""
+
+#: ../../../Views/feedapi_view.php:26
+msgid "Read only:"
+msgstr "Acceso de solo lectura:"
+
+#: ../../../Views/feedapi_view.php:29
+msgid "Read & Write:"
+msgstr "Lectura & Escritura"
+
+#: ../../../Views/feedapi_view.php:33
+msgid "Html"
+msgstr "HTML"
+
+#: ../../../Views/feedapi_view.php:34
+msgid "The feed list view"
+msgstr "Vista de la lista de fuentes"
+
+#: ../../../Views/feedapi_view.php:35
+msgid "This page"
+msgstr "Esta página"
+
+#: ../../../Views/feedapi_view.php:37
+msgid "JSON"
+msgstr "JSON"
+
+#: ../../../Views/feedapi_view.php:38
+msgid "To use the json api the request url needs to include .json"
+msgstr "Para usar la api json la URL de la request debe incluir .json"
+
+#: ../../../Views/feedapi_view.php:43
+msgid "List feeds for autenticated user"
+msgstr "Listar las fuentes para un usuario autentificado"
+
+#: ../../../Views/feedapi_view.php:46
+msgid "List public feeds for the given user"
+msgstr "Listar las fuentes publicas para el usuario seleccionado"
+
+#: ../../../Views/feedapi_view.php:49
+msgid "Get feed id by name"
+msgstr "Seleccionar el id de una fuente por nombre"
+
+#: ../../../Views/feedapi_view.php:53
+msgid "Get feed field"
+msgstr "Seleccionar campo de la fuente"
+
+#: ../../../Views/feedapi_view.php:56
+msgid "Get all feed fields"
+msgstr "Seleccionar todos los campos de la fuente"
+
+#: ../../../Views/feedapi_view.php:63
+msgid "Last updated time and value for feed"
+msgstr "Último tiempo actualizado y valor para la fuente"
+
+#: ../../../Views/feedapi_view.php:66
+msgid "Last value of a given feed"
+msgstr "Último valor de la fuente"
+
+#: ../../../Views/feedapi_view.php:69
+msgid "Last value for multiple feeds"
+msgstr "Último valor para varias fuentes"
+
+#: ../../../Views/feedapi_view.php:72
+msgid "Returns feed data"
+msgstr "Datos de la fuente"
+
+#: ../../../Views/feedapi_view.php:75
+msgid "Returns histogram data"
+msgstr "Histograma de datos"
+
+#: ../../../Views/feedapi_view.php:78
+msgid "Returns kwh consumed in a given power band using histogram data type"
+msgstr ""
+"kWh consumidos en una banda de potencia usando el tipo de datos histograma"
+
+#: ../../../Views/feedapi_view.php:107
+msgid "Return total engines size"
+msgstr "Tamaño total de los motores"
+
+#: ../../../Views/feedapi_view.php:110
+msgid "Return buffer points pending write"
+msgstr "Puntos del buffer a espera de escritura"
+
+#: ../../../Views/feedapi_view.php:115
+msgid "Virtual feed process actions"
+msgstr "Procesos para la fuente virtual"
+
+#: ../../../Views/feedapi_view.php:117
+msgid "Get feed process list"
+msgstr "Obtener lista de procesos de una fuente"
+
+#: ../../../Views/feedapi_view.php:118
+msgid "Set feed process list"
+msgstr "Modificar lista de procesos de una fuente"
+
+#: ../../../Views/feedapi_view.php:119
+msgid "Reset feed process list"
+msgstr "Resetear lista de procesos de una fuente"
+
+#: ../../../Views/feedlist_view.php:28
+msgid "Feed API Help"
+msgstr "Ayuda de la API para fuentes de datos"
+
+#: ../../../Views/feedlist_view.php:29 ../../../feed_menu.php:7
+msgid "Feeds"
+msgstr "Fuentes"
+
+#: ../../../Views/feedlist_view.php:32
+msgid "No feeds created"
+msgstr "No existen fuentes de datos"
+
+#: ../../../Views/feedlist_view.php:33
+msgid ""
+"Feeds are where your monitoring data is stored. The route for creating "
+"storage feeds is to start by creating inputs (see the inputs tab). Once you "
+"have inputs you can either log them straight to feeds or if you want you can "
+"add various levels of input processing to your inputs to create things like "
+"daily average data or to calibrate inputs before storage. Alternatively you "
+"can create Virtual feeds, this is a special feed that allows you to do post "
+"processing on existing storage feeds data, the main advantage is that it "
+"will not use additional storage space and you may modify post processing "
+"list that gets applyed on old stored data. You may want to follow the link "
+"as a guide for generating your request."
+msgstr ""
+"Las fuentes son el lugar donde tus dato recogido son almacenados. La forma "
+"de crear fuentes de almacenado es empezar creando entradas (véase la tab "
+"Entradas). Una vez que tienes las entradas puedes o bien guardarlas "
+"directamente en las fuentes o añadir varios niveles de procesado de la "
+"entrada para crear cosas como la media diaria o calibrar las entradas antes "
+"del almacenamiento. Alternativamente, e pueden crear fuentes virtuales, un "
+"tipo especial que te permite hacer post-procesamiento en fuentes existentes. "
+"La principal ventaja de ésto es que no usa espacio extra de guardado y "
+"puedes modificar la lista de post-procesos que se aplica en datos "
+"antiguamente guardados. Quizás quieras seguir el enlace para guiarte en la "
+"generación de tus peticiones."
+
+#: ../../../Views/feedlist_view.php:33
+msgid "Feed API helper"
+msgstr "Ayuda de la API para fuentes de datos"
+
+#: ../../../Views/feedlist_view.php:39
+msgid "Refresh feed size"
+msgstr "Refrescar tamaño de la fuente"
+
+#: ../../../Views/feedlist_view.php:40
+msgid "New virtual feed"
+msgstr "Nueva fuente virtual"
+
+#: ../../../Views/feedlist_view.php:47
+msgid "Delete feed"
+msgstr "Borrar fuente"
+
+#: ../../../Views/feedlist_view.php:50
+msgid "Deleting a feed is permanent."
+msgstr "Borrar una fuente es permanente"
+
+#: ../../../Views/feedlist_view.php:52
+msgid ""
+"If you have Input Processlist processors that use this feed, after deleting "
+"it, review that process lists or they will be in error, freezing other "
+"Inputs. Also make sure no Dashboards use the deleted feed."
+msgstr ""
+"Si en sus Entradas tiene procesos que usan esta fuente, después de borrarlo "
+"revise dicha lista de procesos u ocurrirá un error, paralizando otras "
+"entradas. Asegúrese también de que ningún panel usa dicha fuente."
+
+#: ../../../Views/feedlist_view.php:53
+msgid ""
+"This is a Virtual Feed, after deleting it, make sure no Dashboard continue "
+"to use the deleted feed."
+msgstr ""
+"Ésta es una fuente virtual. Después de borrarla asegúrese de que ningún "
+"panel lo sigue usando."
+
+#: ../../../Views/feedlist_view.php:55
+msgid "Are you sure you want to delete?"
+msgstr "¿Seguro que quieres borrar?"
+
+#: ../../../Views/feedlist_view.php:58 ../../../Views/feedlist_view.php:145
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: ../../../Views/feedlist_view.php:59
+msgid "Delete permanently"
+msgstr "Borrado permanente"
+
+#: ../../../Views/feedlist_view.php:124
+msgid "Close"
+msgstr "Cerrar"
+
+#: ../../../Views/feedlist_view.php:131
+msgid "New Virtual Feed"
+msgstr "Nueva Fuente Virtual"
+
+#: ../../../Views/feedlist_view.php:146
+msgid "Save"
+msgstr "Guardar"
+
+#: ../../../Views/feedlist_view.php:161
+msgid "Id"
+msgstr "Id"
+
+#: ../../../Views/feedlist_view.php:162
+msgid "Tag"
+msgstr "Etiqueta"
+
+#: ../../../Views/feedlist_view.php:163
+msgid "Name"
+msgstr "Nombre"
+
+#: ../../../Views/feedlist_view.php:164
+msgid "Process list"
+msgstr "Lista de procesos"
+
+#: ../../../Views/feedlist_view.php:165
+msgid "Public"
+msgstr "Público"
+
+#: ../../../Views/feedlist_view.php:166
+msgid "Datatype"
+msgstr "Tipo de datos"
+
+#: ../../../Views/feedlist_view.php:167
+msgid "Engine"
+msgstr "Motor"
+
+#: ../../../Views/feedlist_view.php:168
+msgid "Size"
+msgstr "Tamaño"
+
+#: ../../../Views/feedlist_view.php:169
+msgid "Updated"
+msgstr "Actualizado"
+
+#: ../../../Views/feedlist_view.php:170
+msgid "Value"
+msgstr "Valor"
+
+#~ msgid ""
+#~ "If you want to call any of the following action's when your not logged "
+#~ "in, add an apikey to the URL of your request: &apikey=APIKEY."
+#~ msgstr ""
+#~ "Si quiere realizar alguna de las siguientes acciones cuando no esté "
+#~ "logueado, añada un apikey a la URL: &apikey=APIKEY."
+
+#, fuzzy
+#~ msgid "Returns histogram data:"
+#~ msgstr "Datos de histograma"
+
+#, fuzzy
+#~ msgid "Delete a datapoint:"
+#~ msgstr "¿Borrar entrada?"
+
+#, fuzzy
+#~ msgid "Delete a feed:"
+#~ msgstr "Borrar fuente:"
+
+#, fuzzy
+#~ msgid "Restore a feed:"
+#~ msgstr "Renombrar fuente"
+
+#, fuzzy
+#~ msgid "Export a feed:"
+#~ msgstr "fuente convertida:"
+
+#~ msgid "WARNING deleting a feed is permanent"
+#~ msgstr "Atención, el borrado de la fuente será permante"
+
+#~ msgid "Are you sure you want to delete this feed?"
+#~ msgstr "¿Estás seguro de que quieres borrar la fuente?"
+
+#~ msgid "Feed "
+#~ msgstr "Fuente"
+
+#~ msgid " deleted"
+#~ msgstr " borrado"
+
+#~ msgid "Feed does not exist"
+#~ msgstr "La fuente no existe"
+
+#, fuzzy
+#~ msgid "Feed data"
+#~ msgstr "Fuente"
+
+#~ msgid "Deleted feeds"
+#~ msgstr "Fuentes borradas"
+
+#~ msgid "Emoncms database setup script"
+#~ msgstr "Script de creación de la base de datos de Emoncms"
+
+#~ msgid "Continue to emoncms"
+#~ msgstr "Continuar a emoncms"
+
+#~ msgid "to run script uncomment runnable"
+#~ msgstr "para ejecutar el código descomenta 'runnable'"
+
+#~ msgid "dashboards new"
+#~ msgstr "Nuevo panel"
+
+#~ msgid "Logout"
+#~ msgstr "Desconectar"
+
+#~ msgid "dashboard set"
+#~ msgstr "establecer panel"
+
+#~ msgid "dashboard set configuration"
+#~ msgstr "establecer configuración del panel"
+
+#~ msgid "Feed type changed"
+#~ msgstr "Tipo de fuente cambiada"
+
+#~ msgid "Feed tag changed"
+#~ msgstr "Etiqueta de la fuente cambiada"
+
+#~ msgid "Input deleted"
+#~ msgstr "Entrada borrada"
+
+#~ msgid "Process list has been reset"
+#~ msgstr "La lista de procesos ha sido reseteada"
+
+#~ msgid "Invalid username or password"
+#~ msgstr "Usuario o contraseña inválidos"
+
+#~ msgid "Welcome, you are now logged in"
+#~ msgstr "Bienvenido, ya estás conectado"
+
+#~ msgid "Sorry username already exists"
+#~ msgstr "El usuario ya existe"
+
+#~ msgid "Please enter a username that is 4 to 30 characters long"
+#~ msgstr "Por favor introduzca un nombre de usuario de 4 a 40 caracteres"
+
+#~ msgid "Please enter a password that is 4 to 30 characters long"
+#~ msgstr "Por favor introduzca una contraseña de 4 a 30 caracteres"
+
+#~ msgid "Your new account has been created"
+#~ msgstr "Tu nueva cuenta ha sido creada"
+
+#~ msgid "Your password has been changed"
+#~ msgstr "Tu contraseña ha sido cambiada"
+
+#~ msgid "Invalid password"
+#~ msgstr "Contraseña inválida"
+
+#~ msgid "No email address present"
+#~ msgstr "Email no presente"
+
+#~ msgid "New read apikey: "
+#~ msgstr "Nueva clave de lectura (API):"
+
+#~ msgid "New write apikey: "
+#~ msgstr "Nueva clave de escritura (API):"
+
+#~ msgid "You are logged out"
+#~ msgstr "Te has desconectado"
+
+#~ msgid "Invalid token"
+#~ msgstr "Token inválido"
+
+#~ msgid "Restricted access"
+#~ msgstr "Acceso restringido"
+
+#~ msgid "BD Settings error"
+#~ msgstr "Error en la configuración de la conexión a la base de datos"
+
+#~ msgid "Please, check database settings.php file"
+#~ msgstr "Deberías revisar el fichero settings.php"
+
+#~ msgid "No settings.php file found"
+#~ msgstr "No se ha encontrado el fichero settings.php"
+
+#~ msgid ""
+#~ "Copy and modify Includes/default.settings.php to Includes/settings.php"
+#~ msgstr ""
+#~ "Copia y modifica Includes/default.settings.php en Includes/settings.php"
+
+#~ msgid " clone"
+#~ msgstr " clonar"
+
+#~ msgid "Message successfully sent!"
+#~ msgstr "¡Mensaje enviado correctamente!"
+
+#~ msgid " is"
+#~ msgstr "está"
+
+#~ msgid " is inactive"
+#~ msgstr "está inactivo"
+
+#~ msgid "Log to feed"
+#~ msgstr "Enviar a una fuente"
+
+#~ msgid "Power to kWh"
+#~ msgstr "Power to kWh"
+
+#~ msgid "Power to kWh/d"
+#~ msgstr "Power to kWh/d"
+
+#~ msgid "x input"
+#~ msgstr "entrada x"
+
+#~ msgid "input on-time"
+#~ msgstr "input on-time"
+
+#~ msgid "kWhinc to kWh/d"
+#~ msgstr "kWhinc to kWh/d"
+
+#~ msgid "kWh to kWh/d"
+#~ msgstr "kWh to kWh/d"
+
+#~ msgid "update feed @time"
+#~ msgstr "Actualizar fuente @tiempo"
+
+#~ msgid "+ input"
+#~ msgstr "+ input"
+
+#~ msgid "/ input"
+#~ msgstr "/ input"
+
+#~ msgid "phaseshift"
+#~ msgstr "phaseshift"
+
+#~ msgid "accumulator"
+#~ msgstr "acumulador"
+
+#~ msgid "rate of change"
+#~ msgstr "ratio de cambio"
+
+#~ msgid "histogram"
+#~ msgstr "histograma"
+
+#~ msgid "average"
+#~ msgstr "media"
+
+#~ msgid "heat flux"
+#~ msgstr "flujo de calor"
+
+#~ msgid "power gained to kWh/d"
+#~ msgstr "potencia obtenida a kWh/d"
+
+#~ msgid ""
+#~ "API keys are used to give authenticated access without login in via a "
+#~ "normal session."
+#~ msgstr ""
+#~ "Las siguientes claves son usadas para permitir acceso autenticado sin "
+#~ "necesidad de login."
+
+#~ msgid "Allows to access in read only mode"
+#~ msgstr "Permite el acceso en modo de sólo lectura"
+
+#~ msgid "new"
+#~ msgstr "nuevo"
+
+#~ msgid "Write only access: "
+#~ msgstr "Acceso en modo escritura:"
+
+#~ msgid "Keep secret. Write mode access"
+#~ msgstr "Mentener en secreto. Acceso en modo escritura"
+
+#~ msgid "Post API"
+#~ msgstr "Post API"
+
+#~ msgid ""
+#~ "Example: Click or copy this to your web browser or send from your "
+#~ "monitoring hardware"
+#~ msgstr ""
+#~ "Por ejemplo: Pulsa o copia la siguiente url en el navegador or mándala "
+#~ "desde tu hardware de monitorización"
+
+#~ msgid "try me"
+#~ msgstr "pruébame"
+
+#~ msgid "Using Node addressing"
+#~ msgstr "Usando direccionamiento del nodo"
+
+#~ msgid "Change node_id from URL with the node identification"
+#~ msgstr "Cambiar el node_id desde la URL con la identificación del nodo"
+
+#~ msgid "Visualisation API"
+#~ msgstr "API para visualización"
+
+#~ msgid ""
+#~ "These are all the visualisations that are available in emoncms3. To view "
+#~ "a visualisation enter in a relevant feedid in the underlined boxes below "
+#~ "and then click on the > button."
+#~ msgstr ""
+#~ "Estas son todas la formas de visualización disponibles en Emoncms3. Para "
+#~ "ejecutar una vista introduce los datos apropiados en las cajas de texto y "
+#~ "pulsa en el boton >."
+
+#~ msgid "URL"
+#~ msgstr "Enlace"
+
+#~ msgid "View"
+#~ msgstr "Vista"
+
+#~ msgid "Real-time graph"
+#~ msgstr "Gráfico en tiempo real"
+
+#~ msgid "Raw data graph"
+#~ msgstr "Gráfico de datos brutos"
+
+#~ msgid "Bar graph"
+#~ msgstr "Gráfico de barras"
+
+#~ msgid "Smoothie"
+#~ msgstr "Smoothie"
+
+#~ msgid "All time histogram"
+#~ msgstr "Histograma completo"
+
+#~ msgid "Daily histogram"
+#~ msgstr "Histograma diario"
+
+#~ msgid "Zoom"
+#~ msgstr "Zoom"
+
+#~ msgid "kWh/d Comparison"
+#~ msgstr "kWh/d Comparison"
+
+#~ msgid "Stacked"
+#~ msgstr "Apliada"
+
+#~ msgid "Threshold"
+#~ msgstr "Threshold"
+
+#~ msgid "Simple zoom"
+#~ msgstr "Zoom sencillo"
+
+#~ msgid "Bar graph (ordered by height)"
+#~ msgstr "Bar graph (ordered by height)"
+
+#~ msgid "Threshold ordered by height"
+#~ msgstr "Threshold ordered by height"
+
+#~ msgid "Multigraph"
+#~ msgstr "Gráfico múltiple"
+
+#~ msgid "Datapoint Editor"
+#~ msgstr "Editor de datos"
+
+#~ msgid "Other options:"
+#~ msgstr "Otras opciones:"
+
+#~ msgid "Hide menu"
+#~ msgstr "Ocultar menu"
+
+#~ msgid ""
+#~ "Hide the top menu and footer by adding the attribute &embed=1 to the URL."
+#~ msgstr ""
+#~ "Puedes ocultar el menu superior y el pié añadiendo el atributo &embed=1 "
+#~ "en la URL. "
+
+#~ msgid "Share"
+#~ msgstr "Compartir"
+
+#~ msgid "To share a visualisation use your read apikey. Add the attribute "
+#~ msgstr ""
+#~ "Para compartir una vista utiliza tu clave de lectura. Añade el atributo "
+
+#~ msgid " to the URL"
+#~ msgstr " en la URL"
+
+#~ msgid "Embed"
+#~ msgstr "Incrustar"
+
+#~ msgid "Reset Multigraph"
+#~ msgstr "Inicializar Multigráfico"
+
+#~ msgid "The multigraph can be reset using the &clear=1 attribute."
+#~ msgstr ""
+#~ "El multigráfico puede ser inicializado usando el atributo &clear=1 en la "
+#~ "URL."
+
+#~ msgid "Yes please"
+#~ msgstr "Sí"
+
+#~ msgid "Inputs"
+#~ msgstr "Entradas"
+
+#~ msgid "Dashboards"
+#~ msgstr "Paneles"
+
+#~ msgid "API"
+#~ msgstr "API"
+
+#~ msgid "Admin"
+#~ msgstr "Administrar"
+
+#~ msgid "Account"
+#~ msgstr "Cuenta"
+
+#~ msgid "Notify settings"
+#~ msgstr "Configuración de notificaciones"
+
+#~ msgid "Notification recipiants (To): "
+#~ msgstr "Destinatarios de las notificaciones (To):"
+
+#~ msgid "Notify "
+#~ msgstr "Notificar"
+
+#~ msgid "Setup feed notifications"
+#~ msgstr "Establecer notificaciones de la fuente"
+
+#~ msgid "Notify when feed = value: "
+#~ msgstr "Notificar cuando la fuente = valor:"
+
+#~ msgid "Notify when feed is inactive"
+#~ msgstr "Notificar cuando esta fuente esté inactiva"
+
+#~ msgid "Notify feed status periodically"
+#~ msgstr "Notificar el estado de la fuente de manera periódica"
+
+#~ msgid "Edit mail settings"
+#~ msgstr "Editar preferencias de correo"
+
+#~ msgid "Ok"
+#~ msgstr "Ok"
+
+#~ msgid "User: "
+#~ msgstr "Usuario:"
+
+#~ msgid "Select preferred language"
+#~ msgstr "Selecciona el idioma por defecto:"
+
+#~ msgid "Browser language"
+#~ msgstr "Lenguaje del navegador"
+
+#~ msgid "Local time"
+#~ msgstr "Hora local"
+
+#~ msgid "Time offset in hours:"
+#~ msgstr "Diferencia horario en horas:"
+
+#~ msgid "Set"
+#~ msgstr "Establecer"
+
+#~ msgid "Change details"
+#~ msgstr "Cambiar detalles"
+
+#~ msgid "Username:"
+#~ msgstr "Nombre de usuario:"
+
+#~ msgid "Email:"
+#~ msgstr "Correo:"
+
+#~ msgid "Change password"
+#~ msgstr "Cambiar contraseña"
+
+#~ msgid "Current password:"
+#~ msgstr "Contraseña actual:"
+
+#~ msgid "New password:"
+#~ msgstr "Nueva contraseña:"
+
+#~ msgid "Account Statistics"
+#~ msgstr "Estadísticas de Cuenta"
+
+#~ msgid "Disk space use:"
+#~ msgstr "Uso de espacio en disco:"
+
+#~ msgid "Up hits:"
+#~ msgstr "Up hits:"
+
+#~ msgid "Down hits:"
+#~ msgstr "Down hits:"
+
+#~ msgid "en_EN"
+#~ msgstr "Inglés"
+
+#~ msgid "es_ES"
+#~ msgstr "Español"
+
+#~ msgid "nl_BE"
+#~ msgstr "Belga"
+
+#~ msgid "nl_NL"
+#~ msgstr "Holandés"
+
+#~ msgid "fr_FR"
+#~ msgstr "Francés"
+
+#~ msgid "Admin panel"
+#~ msgstr "Panel de administración"
+
+#~ msgid "Total feed data disk space use: "
+#~ msgstr "Total de espacio de disco usado por la fuente de datos:"
+
+#~ msgid "Users"
+#~ msgstr "Usuarios"
+
+#~ msgid "registered users"
+#~ msgstr "usuarios registrados"
+
+#~ msgid "Username"
+#~ msgstr "Nombre de usuario"
+
+#~ msgid "Up hits"
+#~ msgstr "Up hits"
+
+#~ msgid "Dn hits"
+#~ msgstr "Dn hits"
+
+#~ msgid "Memory use"
+#~ msgstr "Uso de memoria"
+
+#~ msgid "Dashboard name: "
+#~ msgstr "Nombre del panel:"
+
+#~ msgid "Description: "
+#~ msgstr "Descripción"
+
+#~ msgid "Main: "
+#~ msgstr "Principal:"
+
+#~ msgid "Published: "
+#~ msgstr "Publicado:"
+
+#~ msgid "Public: "
+#~ msgstr "Público:"
+
+#~ msgid "Dashboard Configuration"
+#~ msgstr "Configuración del panel"
+
+#~ msgid "Menu name: (lowercase a-z only)"
+#~ msgstr "Nombre para el menu: (sólo letras de la \"a\" a la \"z\")"
+
+#~ msgid "Make this dashboard the first shown"
+#~ msgstr "Hacer este panel como el primero que se muestra"
+
+#~ msgid "Main"
+#~ msgstr "Principal"
+
+#~ msgid "Activate this dashboard"
+#~ msgstr "Activar este panel"
+
+#~ msgid "Published"
+#~ msgstr "Publicado"
+
+#~ msgid "Anyone with the URL can see this dashboard"
+#~ msgstr "Cualquiera con la dirección URL puede ver este panel"
+
+#~ msgid ""
+#~ "Shows dashboard description on mouse over dashboard name in menu project"
+#~ msgstr ""
+#~ "Muestra la descripción del panel cuando se pasa el ratón sobre su nombre "
+#~ "en el menú del proyecto"
+
+#~ msgid "Show description"
+#~ msgstr "Mostrar descripción"
+
+#~ msgid "Save changes"
+#~ msgstr "Guardar cambios"
+
+#~ msgid "Options"
+#~ msgstr "Opciones"
+
+#~ msgid "Delete"
+#~ msgstr "Borrar"
+
+#~ msgid "Saved"
+#~ msgstr "Guardar"
+
+#~ msgid "New dashboard"
+#~ msgstr "Nuevo panel"
+
+#~ msgid "Thumb view"
+#~ msgstr "Formato iconos"
+
+#~ msgid "Dashboard"
+#~ msgstr "Panel"
+
+#~ msgid "Actions"
+#~ msgstr "Acciones"
+
+#~ msgid "This is the main dashboard"
+#~ msgstr "Este es el panel principal del proyecto"
+
+#~ msgid "Set main dashboard"
+#~ msgstr "Establecer panel principal"
+
+#~ msgid "Unpublish dashboard"
+#~ msgstr "Despublicar panel"
+
+#~ msgid "Publish dashboard"
+#~ msgstr "Publicar panel"
+
+#~ msgid "Make dashboard private"
+#~ msgstr "Hacer panel privado"
+
+#~ msgid "Make dashboard public"
+#~ msgstr "Hacer panel público"
+
+#~ msgid "Draw"
+#~ msgstr "Diseñar"
+
+#~ msgid "Clone"
+#~ msgstr "Clonar"
+
+#~ msgid "Public share URL"
+#~ msgstr "URL pública"
+
+#~ msgid "Private share URL"
+#~ msgstr "URL privada"
+
+#~ msgid "Dashboards:"
+#~ msgstr "Paneles:"
+
+#~ msgid "Draw Editor"
+#~ msgstr "Diseñador"
+
+#~ msgid "View mode"
+#~ msgstr "Vista"
+
+#~ msgid "Config"
+#~ msgstr "Configuración"
+
+#~ msgid "New"
+#~ msgstr "Nuevo"
+
+#~ msgid "List view"
+#~ msgstr "Formato lista"
+
+#~ msgid "Explore Public Dashboards"
+#~ msgstr "Explorar paneles públicos"
+
+#~ msgid "User"
+#~ msgstr "Usuario"
+
+#~ msgid "Alias"
+#~ msgstr "Alias"
+
+#~ msgid "Description"
+#~ msgstr "Descripción"
+
+#~ msgid "Select graph type:"
+#~ msgstr "Seleccione un tipo de gráfico:"
+
+#~ msgid "Real-time"
+#~ msgstr "Tiempo real"
+
+#~ msgid "Raw data"
+#~ msgstr "Datos brutos"
+
+#~ msgid "Histogram"
+#~ msgstr "Histograma"
+
+#~ msgid "Feed type"
+#~ msgstr "Tipo de fuente"
+
+#~ msgid "Undefined"
+#~ msgstr "Indefinido"
+
+#~ msgid "Real-time data"
+#~ msgstr "Datos en tiempo real"
+
+#~ msgid "Daily data"
+#~ msgstr "Datos diarios"
+
+#~ msgid "Tag feed"
+#~ msgstr "Etiqueta de la fuente"
+
+#~ msgid "Rename"
+#~ msgstr "Renombrar"
+
+#~ msgid "Notify"
+#~ msgstr "Notificar"
+
+#~ msgid "Set notifications"
+#~ msgstr "Establecer notificaciones"
+
+#~ msgid "Set notification behavior for this feed"
+#~ msgstr "Establecer notificaciones para esta fuente"
+
+#~ msgid "Delete feed?"
+#~ msgstr "¿Borrar fuente?"
+
+#~ msgid "feed/delete"
+#~ msgstr "fuente/borrar"
+
+#~ msgid "Sync feeds"
+#~ msgstr "Sincronizar fuentes"
+
+#~ msgid "You have no feeds"
+#~ msgstr "No existen fuentes"
+
+#~ msgid "s ago"
+#~ msgstr " s atrás"
+
+#~ msgid " mins ago"
+#~ msgstr " minutros atrás"
+
+#~ msgid " hours ago"
+#~ msgstr " horas atrás"
+
+#~ msgid "inactive"
+#~ msgstr "inactivo"
+
+#~ msgid "Node view"
+#~ msgstr "Vista de nodos"
+
+#~ msgid "Node"
+#~ msgstr "Nodo"
+
+#~ msgid "Autoconfigure inputs"
+#~ msgstr "Configura entradas automaticamente"
+
+#~ msgid "Nodes"
+#~ msgstr "Nodos"
+
+#~ msgid "Input configuration:   "
+#~ msgstr "Configuración de entrada:"
+
+#~ msgid ""
+#~ "Input processes are executed sequentially with the result being passed "
+#~ "back for further processing by the next processor in the input processing "
+#~ "list."
+#~ msgstr ""
+#~ "Los procesos de entrada son ejecutados de manera secuencial y el "
+#~ "resultado es pasado para ser procesador por el siguiente proceso de la "
+#~ "lista de procesos de entrada."
+
+#~ msgid "add"
+#~ msgstr "añadir"
+
+#~ msgid "Reset process list?"
+#~ msgstr "¿Inicializar la lista de procesos?"
+
+#~ msgid "Are you sure you want to delete input: "
+#~ msgstr "¿Estás seguro de que quieres borrar la entrada:"
+
+#~ msgid "Order"
+#~ msgstr "Ordenar"
+
+#~ msgid "Process"
+#~ msgstr "Procesar"
+
+#~ msgid "Arg"
+#~ msgstr "Argumento"
+
+#~ msgid "Move up"
+#~ msgstr "Mover arriba"
+
+#~ msgid "You have no processes defined"
+#~ msgstr "No existen procesos definidos"
+
+#~ msgid "Powered by "
+#~ msgstr "Creado con "
+
+#~ msgid "Password:"
+#~ msgstr "Contraseña:"
+
+#~ msgid "Login"
+#~ msgstr "Entrar"
+
+#~ msgid ""
+#~ "Or if you are new enter a username and password above and click register"
+#~ msgstr ""
+#~ "O si eres un nuevo usuario introduce un nombre de usuario y contraseña y "
+#~ "pulsa en registarse"
+
+#~ msgid "Register"
+#~ msgstr "Registrase"
+
+#~ msgid "Old password:"
+#~ msgstr "Contraseña antigua:"
+
+#~ msgid "CKEditor"
+#~ msgstr "CKEditor"
+
+#~ msgid "delete"
+#~ msgstr "borrar"
+
+#~ msgid "AUTODETECTLANGUAGE"
+#~ msgstr "Browser language"
+
+#~ msgid "Sorry, you need a valid apikey or be logged in to see this page"
+#~ msgstr ""
+#~ "Lo siento, necesitas una clave válida o estar loggeado para ver esta "
+#~ "página"
+
+#~ msgid "Language"
+#~ msgstr "Lenguaje"
+
+#~ msgid "API keys"
+#~ msgstr "Claves API"
+
+#~ msgid "feed: "
+#~ msgstr "fuente:"
+
+#~ msgid " already converted"
+#~ msgstr " ya convertido"
+
+#~ msgid "Embed this graph"
+#~ msgstr "Incrustar este gráfico"
+
+#~ msgid "Realtime: "
+#~ msgstr "Tiempo real:"
+
+#~ msgid "Raw data: "
+#~ msgstr "Datos brutos:"
+
+#~ msgid "Bar graph view: "
+#~ msgstr "Vista de gráfico de barras:"
+
+#~ msgid "English"
+#~ msgstr "Inglés"
+
+#~ msgid "Spanish"
+#~ msgstr "Español"
+
+#~ msgid "updated"
+#~ msgstr "actualizado"
+
+#~ msgid "Save current configuration"
+#~ msgstr "Guardar configuración actual"
+
+#~ msgid "Left"
+#~ msgstr "Izquierda"
+
+#~ msgid "Right"
+#~ msgstr "Derecha"
+
+#~ msgid "Fill"
+#~ msgstr "Rellenar"
+
+#~ msgid "Loading...  please wait about 5s"
+#~ msgstr "Cargando... por favor espere unos 5s"
+
+#~ msgid "Loading..."
+#~ msgstr "Cargando..."
+
+#~ msgid "2 Months"
+#~ msgstr "2 Meses"
+
+#~ msgid "Month"
+#~ msgstr "Mes"
+
+#~ msgid "Week"
+#~ msgstr "Semana"
+
+#~ msgid "Day"
+#~ msgstr "Día"
+
+#~ msgid "Hour"
+#~ msgstr "Hora"
+
+#~ msgid "Left vs"
+#~ msgstr "Izquierda vs"
+
+#~ msgid "Loading a feed can take time.. "
+#~ msgstr "Cargar una fuente puede llevar tiempo..."
+
+#~ msgid "1 day"
+#~ msgstr "1 día"
+
+#~ msgid "12 hours"
+#~ msgstr "12 horas"
+
+#~ msgid "1 hour"
+#~ msgstr "1 hora"
+
+#~ msgid "Date / Time"
+#~ msgstr "Fecha / Hora"
+
+#~ msgid "Total: "
+#~ msgstr "Total:"
+
+#~ msgid " kWh : pounds"
+#~ msgstr "kWh: libras"
+
+#~ msgid " a week, pounds"
+#~ msgstr "una semana, libras"
+
+#~ msgid " a year | Unit price: pounds"
+#~ msgstr "un año | Unidad: libras"
+
+#~ msgid "Last:"
+#~ msgstr "Último:"
+
+#~ msgid "Graph"
+#~ msgstr "Gráfico"
