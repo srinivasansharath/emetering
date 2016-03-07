@@ -126,7 +126,9 @@ class Process_ProcessList
 
         $list[35] = array(_("Publish to MQTT"),ProcessArg::TEXT,"publish_to_mqtt",1,DataType::UNDEFINED,"Main", 'desc'=>"Enter MQTT topic e.g. home/power/kitchen");
 
-        $list[36] = array(_("Reset to NULL"),ProcessArg::NONE,"reset2null",0,DataType::UNDEFINED,"Misc", 'desc'=>"A NULL value is passed back for further processing by the next processor in the processing list.<br>Usefull for conditional process to work on.");
+        //$list[36] = array(_("Reset to NULL"),ProcessArg::NONE,"reset2null",0,DataType::UNDEFINED,"Misc", 'desc'=>"A NULL value is passed back for further processing by the next processor in the processing list.<br>Usefull for conditional process to work on.");
+        $list[36] = array(_("Float to decimal"),ProcessArg::NONE,"float2dec",0,DataType::UNDEFINED,"Misc", 'desc'=>"An IEEE 754 number is converted to decimal");
+
         $list[37] = array(_("Reset to Original"),ProcessArg::NONE,"reset2original",0,DataType::UNDEFINED,"Misc", 'desc'=>"The original value, unchanged by any process, is passed back for further processing by the next processor in the processing list.");
 
         $list[42] = array(_("If ZERO, skip next"),ProcessArg::NONE,"if_zero_skip",0,DataType::UNDEFINED,"Conditional", 'desc'=>"If value from last process is ZERO, process execution will skip execution of next process in list");
@@ -194,6 +196,35 @@ class Process_ProcessList
          return $value;
     }
 
+    public function float2dec($arg, $time, $value)
+    {
+        #Extract bits
+        $sign = (0x80000000 & $value)>>31;
+        $exponent = (0x7F800000 & $value)>>23;
+        $mantissa = 0x007FFFFF & $value;
+
+        #compute the mantissa
+        $filter = 0x00400000;
+        $mvalue = 0;
+        $i=1;
+        while ($i<=23){
+            if ($mantissa & $filter){
+                $dec = pow(2, ($i*-1));
+                $mvalue = $mvalue + $dec;
+            }
+            $i += 1;
+            $filter = $filter >>1;
+        }
+
+        $exponent -= 127;
+        $mvalue += 1;
+
+        #compute the decimal value
+        $decimal_value = pow(-1,$sign) * pow(2,$exponent) * ($mvalue);
+
+        return $decimal_value;
+    }
+    
     public function reset2original($arg, $time, $value)
     {
          return $this->proc_initialvalue;
