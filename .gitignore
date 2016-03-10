@@ -6,8 +6,6 @@ emoncms.log
 .idea
 
 # Ignore all modules except core ones
-Modules/*
-Modules/*/
 !Modules/admin/
 !Modules/feed/
 !Modules/eventp/
