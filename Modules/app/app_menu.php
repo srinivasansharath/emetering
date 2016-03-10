@@ -8,7 +8,7 @@
     
     $menu_left[] = array(
         'name'=>"Nodes", 
-        'path'=>"app/mysolarpv" , 
+        'path'=>"app/" , 
         'session'=>"write", 
         'order' => 5,
         'icon'=>'icon-leaf icon-white',
