@@ -1,6 +1,12 @@
 
 var app_myelectric2 = {
-
+    energy_r: false,
+    energy_y: false,
+    energy_B: false,
+    frequency: false,
+    power_factor: false,
+    temperature: false,
+    humidity: false,
     powerfeed: false,
     dailyfeed: false,
     dailytype: false,
@@ -56,31 +62,59 @@ var app_myelectric2 = {
         // -------------------------------------------------------------------------
 
         // If settings exist for myelectric then we load them in here:
-        if (app.config["myelectric"]!=undefined) {
-            app_myelectric2.powerfeed = app.config.myelectric.powerfeed;
-            app_myelectric2.dailyfeed = app.config.myelectric.dailyfeed;
-            app_myelectric2.dailytype = app.config.myelectric.dailytype;
-            app_myelectric2.currency = app.config.myelectric.currency;
-            app_myelectric2.unitcost = app.config.myelectric.unitcost;
-        } else {
+        // if (app.config["myelectric"]!=undefined) {
+            // app_myelectric2.powerfeed = app.config.myelectric.powerfeed;
+            // app_myelectric2.dailyfeed = app.config.myelectric.dailyfeed;
+            // app_myelectric2.dailytype = app.config.myelectric.dailytype;
+            // app_myelectric2.currency = app.config.myelectric.currency;
+            // app_myelectric2.unitcost = app.config.myelectric.unitcost;
+        // } else {
             app.config.myelectric = {};
         // if no settings then try auto scanning for feeds with suitable names:
             var feeds = app_myelectric2.getfeedsbyid();
             for (z in feeds)
             {
                 var name = feeds[z].name.toLowerCase();
-
-                if (name.indexOf("house_power")!=-1) {
+                
+                if (name.indexOf("node:1:engy_b")!=-1) {
                     app_myelectric2.powerfeed = z;
                 }
-
-                if (name.indexOf("house_wh")!=-1) {
+                
+                if (name.indexOf("node:1:engy_b")!=-1) {
                     app_myelectric2.dailyfeed = z;
                     app_myelectric2.dailytype = 0;
                 }
-            }
-        }
+                if (name.indexOf("node:1:engy_r")!=-1) {
+                    app_myelectric2.energy_r = z;
+                }
 
+                if (name.indexOf("node:1:engy_y")!=-1) {
+                    app_myelectric2.energy_y = z;
+                }
+
+                if (name.indexOf("node:1:engy_b")!=-1) {
+                    app_myelectric2.energy_b = z;
+                }
+                
+                if (name.indexOf("node:1:freq_r")!=-1) {
+                    app_myelectric2.frequency = z;
+                }
+
+                if (name.indexOf("node:1:pwrf_r")!=-1) {
+                    app_myelectric2.power_factor = z;
+                }
+
+                if (name.indexOf("node:1:temp")!=-1) {
+                    app_myelectric2.temperature = z;
+                }
+                
+                if (name.indexOf("node:1:temp")!=-1) {
+                    app_myelectric2.humidity = z;
+                }
+
+            }
+        //}
+        
         if (app_myelectric2.dailytype>1) {
             app_myelectric2.dailytype = 0;
             app_myelectric2.dailyfeed = 0;
@@ -160,17 +194,17 @@ var app_myelectric2 = {
             app_myelectric2.last_startofyeartime = 0;
 
             app.setconfig(config);
-            app_myelectric2.reload = true;
-            app_myelectric2.reloadkwhd = true;
-
-            app_myelectric2.fastupdateinst = setInterval(app_myelectric2.fastupdate,5000);
-            app_myelectric2.slowupdateinst = setInterval(app_myelectric2.slowupdate,60000);
-            app_myelectric2.fastupdate();
-            app_myelectric2.slowupdate();
+            app_myelectric.reload = true;
+            app_myelectric.reloadkwhd = true;
+            
+            app_myelectric.fastupdateinst = setInterval(app_myelectric.fastupdate,2000);
+            app_myelectric.slowupdateinst = setInterval(app_myelectric.slowupdate,2000);
 
             // Switch to main view
             $("#myelectric_config").hide();
             $("#myelectric_body").show();
+            app_myelectric2.fastupdate();
+            app_myelectric2.slowupdate();
         });
 
         $("#myelectric_zoomout").click(function () {view.zoomout(); app_myelectric2.reload = true; app_myelectric2.autoupdate = false; app_myelectric2.fastupdate();});
@@ -227,9 +261,9 @@ var app_myelectric2 = {
             app_myelectric2.resize();
 
 
-            app_myelectric2.fastupdateinst = setInterval(app_myelectric2.fastupdate,5000);
+            app_myelectric2.fastupdateinst = setInterval(app_myelectric2.fastupdate,2000);
             app_myelectric2.fastupdate();
-            app_myelectric2.slowupdateinst = setInterval(app_myelectric2.slowupdate,60000);
+            app_myelectric2.slowupdateinst = setInterval(app_myelectric2.slowupdate,2000);
             app_myelectric2.slowupdate();
         }
     },
@@ -239,15 +273,15 @@ var app_myelectric2 = {
         var windowheight = $(window).height();
 
         bound = {};
-
-        var width = $("#myelectric_placeholder_bound_kwhd").width();
-        $("#myelectric_placeholder_kwhd").attr('width',width);
-        graph_bars.width = width;
-
-        var height = $("#myelectric_placeholder_bound_kwhd").height();
-        $("#myelectric_placeholder_kwhd").attr('height',height);
-        graph_bars.height = height;
-
+        
+        // var width = $("#myelectric_placeholder_bound_kwhd").width();
+        // $("#myelectric_placeholder_kwhd").attr('width',width);
+        // graph_bars.width = width;
+        
+        // var height = $("#myelectric_placeholder_bound_kwhd").height();
+        // $("#myelectric_placeholder_kwhd").attr('height',height); 
+        // graph_bars.height = height;
+        
         var width = $("#myelectric_placeholder_bound_power").width();
         $("#myelectric_placeholder_power").attr('width',width);
         graph_lines.width = width;
@@ -354,8 +388,22 @@ var app_myelectric2 = {
         // set the power now value
         if (app_myelectric2.viewmode=="energy") {
             $("#myelectric_powernow").html((feeds[app_myelectric2.powerfeed].value*1).toFixed(0)+"W");
+            $("#myelectric_energy_r").html((feeds[app_myelectric2.energy_r].value*1).toFixed(0));
+            $("#myelectric_energy_y").html((feeds[app_myelectric2.energy_y].value*1).toFixed(0));
+            $("#myelectric_energy_b").html((feeds[app_myelectric2.energy_b].value*1).toFixed(0));            
+            $("#myelectric_frequency").html((feeds[app_myelectric2.frequency].value*1).toFixed(0));     
+            $("#myelectric_power_factor").html((feeds[app_myelectric2.power_factor].value*1).toFixed(0));     
+            $("#myelectric_temperature").html((feeds[app_myelectric2.temperature].value*1).toFixed(0));     
+            $("#myelectric_humidity").html((feeds[app_myelectric2.humidity].value*1).toFixed(0));     
         } else {
             $("#myelectric_powernow").html("&"+app_myelectric2.currency+";"+(feeds[app_myelectric2.powerfeed].value*1*app_myelectric2.unitcost*0.001).toFixed(2)+"/hr");
+            $("#myelectric_energy_r").html((feeds[app_myelectric2.energy_r].value*1).toFixed(0));
+            $("#myelectric_energy_y").html((feeds[app_myelectric2.energy_y].value*1).toFixed(0));
+            $("#myelectric_energy_b").html((feeds[app_myelectric2.energy_b].value*1).toFixed(0));            
+            $("#myelectric_frequency").html((feeds[app_myelectric2.frequency].value*1).toFixed(0));     
+            $("#myelectric_power_factor").html((feeds[app_myelectric2.power_factor].value*1).toFixed(0));     
+            $("#myelectric_temperature").html((feeds[app_myelectric2.temperature].value*1).toFixed(0));     
+            $("#myelectric_humidity").html((feeds[app_myelectric2.humidity].value*1).toFixed(0));     
         }
         // Advance view
         if (app_myelectric2.autoupdate) {
@@ -409,7 +457,8 @@ var app_myelectric2 = {
                 data: []
             },
             "use": {
-                color: "rgba(6,153,250,0.5)",
+                //color: "rgba(6,153,250,0.5)", //BLUE - Original
+                color: "rgba(255,255,25,0.8)",
                 data: datastore[app_myelectric2.powerfeed].data
             }
         };
