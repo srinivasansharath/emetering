@@ -387,23 +387,23 @@ var app_myelectric2 = {
 
         // set the power now value
         if (app_myelectric2.viewmode=="energy") {
-            $("#myelectric_powernow").html((feeds[app_myelectric2.powerfeed].value*1).toFixed(0)+"W");
+            $("#myelectric_powernow").html((feeds[app_myelectric2.powerfeed].value*1).toFixed(0));
             $("#myelectric_energy_r").html((feeds[app_myelectric2.energy_r].value*1).toFixed(0));
             $("#myelectric_energy_y").html((feeds[app_myelectric2.energy_y].value*1).toFixed(0));
             $("#myelectric_energy_b").html((feeds[app_myelectric2.energy_b].value*1).toFixed(0));            
             $("#myelectric_frequency").html((feeds[app_myelectric2.frequency].value*1).toFixed(0));     
-            $("#myelectric_power_factor").html((feeds[app_myelectric2.power_factor].value*1).toFixed(0));     
-            $("#myelectric_temperature").html((feeds[app_myelectric2.temperature].value*1).toFixed(0));     
-            $("#myelectric_humidity").html((feeds[app_myelectric2.humidity].value*1).toFixed(0));     
+            $("#myelectric_power_factor").html((feeds[app_myelectric2.power_factor].value*1).toFixed(2));     
+            $("#myelectric_temperature").html((feeds[app_myelectric2.temperature].value*1).toFixed(1));     
+            $("#myelectric_humidity").html((feeds[app_myelectric2.humidity].value*1).toFixed(1));     
         } else {
             $("#myelectric_powernow").html("&"+app_myelectric2.currency+";"+(feeds[app_myelectric2.powerfeed].value*1*app_myelectric2.unitcost*0.001).toFixed(2)+"/hr");
             $("#myelectric_energy_r").html((feeds[app_myelectric2.energy_r].value*1).toFixed(0));
             $("#myelectric_energy_y").html((feeds[app_myelectric2.energy_y].value*1).toFixed(0));
             $("#myelectric_energy_b").html((feeds[app_myelectric2.energy_b].value*1).toFixed(0));            
             $("#myelectric_frequency").html((feeds[app_myelectric2.frequency].value*1).toFixed(0));     
-            $("#myelectric_power_factor").html((feeds[app_myelectric2.power_factor].value*1).toFixed(0));     
-            $("#myelectric_temperature").html((feeds[app_myelectric2.temperature].value*1).toFixed(0));     
-            $("#myelectric_humidity").html((feeds[app_myelectric2.humidity].value*1).toFixed(0));     
+            $("#myelectric_power_factor").html((feeds[app_myelectric2.power_factor].value*1).toFixed(2));     
+            $("#myelectric_temperature").html((feeds[app_myelectric2.temperature].value*1).toFixed(1));     
+            $("#myelectric_humidity").html((feeds[app_myelectric2.humidity].value*1).toFixed(1));     
         }
         // Advance view
         if (app_myelectric2.autoupdate) {
