@@ -76,23 +76,23 @@ var app_myelectric = {
             {
                 var name = feeds[z].name.toLowerCase();
                 
-                if (name.indexOf("node:1:engy_r")!=-1) {
+                if (name.indexOf("node:1:apwr_r")!=-1) {
                     app_myelectric.powerfeed = z;
                 }
                 
-                if (name.indexOf("node:1:engy_r")!=-1) {
+                if (name.indexOf("node:1:apwr_r")!=-1) {
                     app_myelectric.dailyfeed = z;
                     app_myelectric.dailytype = 0;
                 }
-                if (name.indexOf("node:1:engy_r")!=-1) {
+                if (name.indexOf("node:1:apwr_r")!=-1) {
                     app_myelectric.energy_r = z;
                 }
 
-                if (name.indexOf("node:1:engy_y")!=-1) {
+                if (name.indexOf("node:1:apwr_y")!=-1) {
                     app_myelectric.energy_y = z;
                 }
 
-                if (name.indexOf("node:1:engy_b")!=-1) {
+                if (name.indexOf("node:1:apwr_b")!=-1) {
                     app_myelectric.energy_b = z;
                 }
                 
